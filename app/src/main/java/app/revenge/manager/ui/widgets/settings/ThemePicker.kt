@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.widgets.settings
+package app.involvexcord.manager.ui.widgets.settings
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -39,11 +39,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.domain.manager.Theme
-import app.revenge.manager.utils.contentDescription
-import app.revenge.manager.utils.thenIf
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.domain.manager.Theme
+import app.involvexcord.manager.utils.contentDescription
+import app.involvexcord.manager.utils.thenIf
 import kotlinx.coroutines.launch
 
 @Composable

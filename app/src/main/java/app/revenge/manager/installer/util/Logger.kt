@@ -1,4 +1,4 @@
-package app.revenge.manager.installer.util
+package app.involvexcord.manager.installer.util
 
 import android.util.Log
 import androidx.compose.runtime.Stable

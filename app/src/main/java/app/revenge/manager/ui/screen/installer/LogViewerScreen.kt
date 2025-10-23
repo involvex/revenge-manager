@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.screen.installer
+package app.involvexcord.manager.ui.screen.installer
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
@@ -35,19 +35,19 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import app.revenge.manager.BuildConfig
+import app.involvexcord.manager.BuildConfig
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.installer.util.LogEntry
-import app.revenge.manager.ui.viewmodel.installer.LogViewerViewModel
-import app.revenge.manager.ui.widgets.installer.LogLine
-import app.revenge.manager.utils.DimenUtils
-import app.revenge.manager.utils.rememberFileSaveLauncher
-import app.revenge.manager.utils.thenIf
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.installer.util.LogEntry
+import app.involvexcord.manager.ui.viewmodel.installer.LogViewerViewModel
+import app.involvexcord.manager.ui.widgets.installer.LogLine
+import app.involvexcord.manager.utils.DimenUtils
+import app.involvexcord.manager.utils.rememberFileSaveLauncher
+import app.involvexcord.manager.utils.thenIf
 import org.koin.androidx.compose.get
 import org.koin.core.parameter.parametersOf
 

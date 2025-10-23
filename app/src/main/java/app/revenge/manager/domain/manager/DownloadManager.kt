@@ -1,11 +1,11 @@
-package app.revenge.manager.domain.manager
+package app.involvexcord.manager.domain.manager
 
 import android.app.DownloadManager
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
 import androidx.core.content.getSystemService
-import app.revenge.manager.BuildConfig
+import app.involvexcord.manager.BuildConfig
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay

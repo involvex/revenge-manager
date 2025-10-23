@@ -1,11 +1,11 @@
-package app.revenge.manager.installer.step.patching
+package app.involvexcord.manager.installer.step.patching
 
-import app.revenge.manager.BuildConfig
-import app.revenge.manager.R
-import app.revenge.manager.installer.step.Step
-import app.revenge.manager.installer.step.StepGroup
-import app.revenge.manager.installer.step.StepRunner
-import app.revenge.manager.installer.step.download.DownloadModStep
+import app.involvexcord.manager.BuildConfig
+import app.involvexcord.manager.R
+import app.involvexcord.manager.installer.step.Step
+import app.involvexcord.manager.installer.step.StepGroup
+import app.involvexcord.manager.installer.step.StepRunner
+import app.involvexcord.manager.installer.step.download.DownloadModStep
 import java.io.File
 
 /**
@@ -30,7 +30,7 @@ class AddModStep(
             ?.takeIf { it.isNotEmpty() }
             ?: throw Error("Missing APKs from signing step")
 
-        app.revenge.manager.installer.util.Patcher.patch(
+        app.involvexcord.manager.installer.util.Patcher.patch(
             runner.logger,
             outputDir = lspatchedDir,
             apkPaths = files.map { it.absolutePath },

@@ -1,4 +1,4 @@
-package app.revenge.manager.utils
+package app.involvexcord.manager.utils
 
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.Navigator

@@ -1,8 +1,8 @@
-package app.revenge.manager.network.service
+package app.involvexcord.manager.network.service
 
-import app.revenge.manager.network.utils.ApiError
-import app.revenge.manager.network.utils.ApiFailure
-import app.revenge.manager.network.utils.ApiResponse
+import app.involvexcord.manager.network.utils.ApiError
+import app.involvexcord.manager.network.utils.ApiFailure
+import app.involvexcord.manager.network.utils.ApiResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.request

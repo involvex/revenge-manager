@@ -1,7 +1,7 @@
-package app.revenge.manager.installer.step
+package app.involvexcord.manager.installer.step
 
 import androidx.annotation.StringRes
-import app.revenge.manager.R
+import app.involvexcord.manager.R
 
 /**
  * Represents a group of [Step]s

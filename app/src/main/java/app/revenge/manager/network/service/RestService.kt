@@ -1,9 +1,9 @@
-package app.revenge.manager.network.service
+package app.involvexcord.manager.network.service
 
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.network.dto.Commit
-import app.revenge.manager.network.dto.Index
-import app.revenge.manager.network.dto.Release
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.network.dto.Commit
+import app.involvexcord.manager.network.dto.Index
+import app.involvexcord.manager.network.dto.Release
 import io.ktor.client.request.parameter
 import io.ktor.client.request.url
 import kotlinx.coroutines.Dispatchers

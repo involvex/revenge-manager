@@ -1,10 +1,10 @@
-package app.revenge.manager.installer.shizuku
+package app.involvexcord.manager.installer.shizuku
 
 import android.content.Context
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.InstallManager
-import app.revenge.manager.installer.Installer
-import app.revenge.manager.utils.showToast
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.InstallManager
+import app.involvexcord.manager.installer.Installer
+import app.involvexcord.manager.utils.showToast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.koin.core.component.KoinComponent

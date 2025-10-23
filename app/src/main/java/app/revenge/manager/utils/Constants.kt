@@ -1,7 +1,7 @@
-package app.revenge.manager.utils
+package app.involvexcord.manager.utils
 
 import android.os.Environment
-import app.revenge.manager.BuildConfig
+import app.involvexcord.manager.BuildConfig
 
 object Constants {
     val TEAM_MEMBERS = listOf(

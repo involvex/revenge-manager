@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.widgets.settings
+package app.involvexcord.manager.ui.widgets.settings
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -14,10 +14,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import app.revenge.manager.BuildConfig
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.utils.DiscordVersion
+import app.involvexcord.manager.BuildConfig
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.utils.DiscordVersion
 import org.koin.androidx.compose.get
 
 @Composable

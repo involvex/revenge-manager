@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.components
+package app.involvexcord.manager.ui.components
 
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme

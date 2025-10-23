@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.components.settings
+package app.involvexcord.manager.ui.components.settings
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth

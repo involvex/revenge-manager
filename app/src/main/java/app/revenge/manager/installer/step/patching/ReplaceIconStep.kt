@@ -1,22 +1,22 @@
-package app.revenge.manager.installer.step.patching
+package app.involvexcord.manager.installer.step.patching
 
 import android.content.Context
 import androidx.compose.ui.graphics.Color
 import com.github.diamondminer88.zip.ZipWriter
-import app.revenge.manager.BuildConfig
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.installer.step.Step
-import app.revenge.manager.installer.step.StepGroup
-import app.revenge.manager.installer.step.StepRunner
-import app.revenge.manager.installer.step.download.DownloadBaseStep
-import app.revenge.manager.installer.utils.ArscUtil
-import app.revenge.manager.installer.utils.ArscUtil.addColorResource
-import app.revenge.manager.installer.utils.ArscUtil.getMainArscChunk
-import app.revenge.manager.installer.utils.ArscUtil.getPackageChunk
-import app.revenge.manager.installer.utils.ArscUtil.getResourceFileName
-import app.revenge.manager.installer.utils.AxmlUtil
-import app.revenge.manager.utils.DiscordVersion
+import app.involvexcord.manager.BuildConfig
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.installer.step.Step
+import app.involvexcord.manager.installer.step.StepGroup
+import app.involvexcord.manager.installer.step.StepRunner
+import app.involvexcord.manager.installer.step.download.DownloadBaseStep
+import app.involvexcord.manager.installer.utils.ArscUtil
+import app.involvexcord.manager.installer.utils.ArscUtil.addColorResource
+import app.involvexcord.manager.installer.utils.ArscUtil.getMainArscChunk
+import app.involvexcord.manager.installer.utils.ArscUtil.getPackageChunk
+import app.involvexcord.manager.installer.utils.ArscUtil.getResourceFileName
+import app.involvexcord.manager.installer.utils.AxmlUtil
+import app.involvexcord.manager.utils.DiscordVersion
 import org.koin.core.component.inject
 
 /**

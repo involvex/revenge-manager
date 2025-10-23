@@ -1,9 +1,9 @@
-package app.revenge.manager.installer.util
+package app.involvexcord.manager.installer.util
 
 import android.content.Context
 import com.android.apksig.ApkSigner
-import app.revenge.manager.BuildConfig
-import app.revenge.manager.utils.Constants
+import app.involvexcord.manager.BuildConfig
+import app.involvexcord.manager.utils.Constants
 import org.bouncycastle.asn1.x500.X500Name
 import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo
 import org.bouncycastle.cert.X509v3CertificateBuilder

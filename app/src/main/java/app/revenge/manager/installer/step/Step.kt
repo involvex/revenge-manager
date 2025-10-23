@@ -1,4 +1,4 @@
-package app.revenge.manager.installer.step
+package app.involvexcord.manager.installer.step
 
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Stable

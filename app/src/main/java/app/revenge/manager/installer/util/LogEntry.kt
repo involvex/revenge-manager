@@ -1,4 +1,4 @@
-package app.revenge.manager.installer.util
+package app.involvexcord.manager.installer.util
 
 import android.annotation.SuppressLint
 import android.os.Parcel

@@ -1,16 +1,16 @@
-package app.revenge.manager.updatechecker.worker
+package app.involvexcord.manager.updatechecker.worker
 
 import android.content.Context
 import android.content.Intent
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import app.revenge.manager.domain.manager.InstallManager
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.domain.repository.RestRepository
-import app.revenge.manager.network.utils.ApiResponse
-import app.revenge.manager.updatechecker.reciever.UpdateBroadcastReceiver
-import app.revenge.manager.utils.DiscordVersion
-import app.revenge.manager.utils.Intents
+import app.involvexcord.manager.domain.manager.InstallManager
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.domain.repository.RestRepository
+import app.involvexcord.manager.network.utils.ApiResponse
+import app.involvexcord.manager.updatechecker.reciever.UpdateBroadcastReceiver
+import app.involvexcord.manager.utils.DiscordVersion
+import app.involvexcord.manager.utils.Intents
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

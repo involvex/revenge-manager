@@ -1,12 +1,12 @@
-package app.revenge.manager.installer.session
+package app.involvexcord.manager.installer.session
 
 import android.app.Service
 import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
-import app.revenge.manager.R
-import app.revenge.manager.ui.activity.MainActivity
-import app.revenge.manager.utils.showToast
+import app.involvexcord.manager.R
+import app.involvexcord.manager.ui.activity.MainActivity
+import app.involvexcord.manager.utils.showToast
 
 class InstallService : Service() {
 

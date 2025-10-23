@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.widgets.about
+package app.involvexcord.manager.ui.widgets.about
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

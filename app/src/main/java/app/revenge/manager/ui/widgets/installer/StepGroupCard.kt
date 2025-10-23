@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.widgets.installer
+package app.involvexcord.manager.ui.widgets.installer
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -23,11 +23,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import app.revenge.manager.R
-import app.revenge.manager.installer.step.Step
-import app.revenge.manager.installer.step.StepStatus
-import app.revenge.manager.installer.step.download.base.DownloadStep
-import app.revenge.manager.utils.thenIf
+import app.involvexcord.manager.R
+import app.involvexcord.manager.installer.step.Step
+import app.involvexcord.manager.installer.step.StepStatus
+import app.involvexcord.manager.installer.step.download.base.DownloadStep
+import app.involvexcord.manager.utils.thenIf
 
 /**
  * Collapsable card containing a group of steps

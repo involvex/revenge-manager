@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.viewmodel.installer
+package app.involvexcord.manager.ui.viewmodel.installer
 
 import android.content.Context
 import android.content.Intent
@@ -7,16 +7,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.core.app.ShareCompat
 import androidx.core.content.FileProvider
-import app.revenge.manager.BuildConfig
+import app.involvexcord.manager.BuildConfig
 import cafe.adriel.voyager.core.model.ScreenModel
 import cafe.adriel.voyager.core.model.screenModelScope
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.InstallManager
-import app.revenge.manager.installer.step.Step
-import app.revenge.manager.installer.step.StepGroup
-import app.revenge.manager.installer.step.StepRunner
-import app.revenge.manager.utils.DiscordVersion
-import app.revenge.manager.utils.showToast
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.InstallManager
+import app.involvexcord.manager.installer.step.Step
+import app.involvexcord.manager.installer.step.StepGroup
+import app.involvexcord.manager.installer.step.StepRunner
+import app.involvexcord.manager.utils.DiscordVersion
+import app.involvexcord.manager.utils.showToast
 import kotlinx.collections.immutable.ImmutableMap
 import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.coroutines.Dispatchers

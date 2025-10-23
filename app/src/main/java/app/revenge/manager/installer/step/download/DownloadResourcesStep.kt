@@ -1,8 +1,8 @@
-package app.revenge.manager.installer.step.download
+package app.involvexcord.manager.installer.step.download
 
 import androidx.compose.runtime.Stable
-import app.revenge.manager.R
-import app.revenge.manager.installer.step.download.base.DownloadStep
+import app.involvexcord.manager.R
+import app.involvexcord.manager.installer.step.download.base.DownloadStep
 import java.io.File
 
 /**

@@ -1,13 +1,13 @@
-package app.revenge.manager.domain.manager
+package app.involvexcord.manager.domain.manager
 
 import android.content.Context
 import android.os.Build
 import android.os.Environment
 import androidx.annotation.StringRes
-import app.revenge.manager.BuildConfig
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.base.BasePreferenceManager
-import app.revenge.manager.utils.DiscordVersion
+import app.involvexcord.manager.BuildConfig
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.base.BasePreferenceManager
+import app.involvexcord.manager.utils.DiscordVersion
 import java.io.File
 import java.util.concurrent.TimeUnit
 

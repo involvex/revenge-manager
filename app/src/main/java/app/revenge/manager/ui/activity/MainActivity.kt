@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.activity
+package app.involvexcord.manager.ui.activity
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -8,11 +8,11 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.app.ActivityCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import app.revenge.manager.ui.screen.home.HomeScreen
-import app.revenge.manager.ui.screen.installer.InstallerScreen
-import app.revenge.manager.ui.theme.RevengeManagerTheme
-import app.revenge.manager.utils.DiscordVersion
-import app.revenge.manager.utils.Intents
+import app.involvexcord.manager.ui.screen.home.HomeScreen
+import app.involvexcord.manager.ui.screen.installer.InstallerScreen
+import app.involvexcord.manager.ui.theme.RevengeManagerTheme
+import app.involvexcord.manager.utils.DiscordVersion
+import app.involvexcord.manager.utils.Intents
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.transitions.SlideTransition
 

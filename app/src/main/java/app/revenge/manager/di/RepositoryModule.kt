@@ -1,6 +1,6 @@
-package app.revenge.manager.di
+package app.involvexcord.manager.di
 
-import app.revenge.manager.domain.repository.RestRepository
+import app.involvexcord.manager.domain.repository.RestRepository
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 

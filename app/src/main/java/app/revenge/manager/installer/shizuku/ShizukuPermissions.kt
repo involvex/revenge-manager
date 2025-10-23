@@ -1,4 +1,4 @@
-package app.revenge.manager.installer.shizuku
+package app.involvexcord.manager.installer.shizuku
 
 import android.content.pm.PackageManager
 import kotlinx.coroutines.DelicateCoroutinesApi

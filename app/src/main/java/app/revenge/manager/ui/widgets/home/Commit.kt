@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.widgets.home
+package app.involvexcord.manager.ui.widgets.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -20,13 +20,13 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import app.revenge.manager.network.dto.Commit
+import app.involvexcord.manager.network.dto.Commit
 import kotlinx.datetime.toJavaInstant
 import java.text.SimpleDateFormat
 import java.util.Date
 
 @Composable
-fun Commit(
+fun CommitItem(
     commit: Commit
 ) {
     val uriHandler = LocalUriHandler.current
@@ -61,7 +61,7 @@ fun Commit(
             }
 
             Text(
-                "•",
+                "\u2022",
                 style = MaterialTheme.typography.labelLarge
             )
 
@@ -84,7 +84,7 @@ fun Commit(
         }
 
         Text(
-            text = commit.info.message.split("\n").first(),
+            text = commit.info.message.split("\\n").first(),
             style = MaterialTheme.typography.labelLarge
         )
     }

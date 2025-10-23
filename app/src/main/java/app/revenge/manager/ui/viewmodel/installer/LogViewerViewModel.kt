@@ -1,15 +1,15 @@
-package app.revenge.manager.ui.viewmodel.installer
+package app.involvexcord.manager.ui.viewmodel.installer
 
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.ShareCompat
 import androidx.core.content.FileProvider
 import cafe.adriel.voyager.core.model.ScreenModel
-import app.revenge.manager.BuildConfig
-import app.revenge.manager.R
-import app.revenge.manager.installer.util.LogEntry
-import app.revenge.manager.utils.copyText
-import app.revenge.manager.utils.showToast
+import app.involvexcord.manager.BuildConfig
+import app.involvexcord.manager.R
+import app.involvexcord.manager.installer.util.LogEntry
+import app.involvexcord.manager.utils.copyText
+import app.involvexcord.manager.utils.showToast
 import java.io.File
 
 class LogViewerViewModel(

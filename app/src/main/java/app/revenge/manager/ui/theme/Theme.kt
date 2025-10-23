@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.theme
+package app.involvexcord.manager.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -9,8 +9,8 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.domain.manager.Theme
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.domain.manager.Theme
 import org.koin.androidx.compose.get
 
 @Composable

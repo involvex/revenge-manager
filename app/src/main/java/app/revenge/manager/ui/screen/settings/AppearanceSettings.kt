@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.screen.settings
+package app.involvexcord.manager.ui.screen.settings
 
 import android.os.Build
 import androidx.compose.foundation.layout.Column
@@ -26,11 +26,11 @@ import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.ui.components.settings.SettingsSwitch
-import app.revenge.manager.ui.widgets.settings.ThemePicker
-import app.revenge.manager.utils.DimenUtils
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.ui.components.settings.SettingsSwitch
+import app.involvexcord.manager.ui.widgets.settings.ThemePicker
+import app.involvexcord.manager.utils.DimenUtils
 import org.koin.androidx.compose.get
 
 class AppearanceSettings: Screen {

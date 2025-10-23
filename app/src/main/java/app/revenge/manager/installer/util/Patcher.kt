@@ -1,4 +1,4 @@
-package app.revenge.manager.installer.util
+package app.involvexcord.manager.installer.util
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -26,7 +26,7 @@ object Patcher {
                 "-m",
                 *embeddedModules.toTypedArray(),
                 "-k",
-                app.revenge.manager.installer.util.Signer.keyStore.absolutePath,
+                app.involvexcord.manager.installer.util.Signer.keyStore.absolutePath,
                 "password",
                 "alias",
                 "password"

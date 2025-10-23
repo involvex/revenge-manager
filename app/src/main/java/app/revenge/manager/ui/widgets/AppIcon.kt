@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.widgets
+package app.involvexcord.manager.ui.widgets
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -9,9 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import app.revenge.manager.BuildConfig
-import app.revenge.manager.R
-import app.revenge.manager.utils.DiscordVersion
+import app.involvexcord.manager.BuildConfig
+import app.involvexcord.manager.R
+import app.involvexcord.manager.utils.DiscordVersion
 
 @Composable
 fun AppIcon(

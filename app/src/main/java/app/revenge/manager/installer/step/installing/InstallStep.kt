@@ -1,18 +1,18 @@
-package app.revenge.manager.installer.step.installing
+package app.involvexcord.manager.installer.step.installing
 
 import android.content.Context
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.InstallMethod
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.installer.Installer
-import app.revenge.manager.installer.session.SessionInstaller
-import app.revenge.manager.installer.shizuku.ShizukuInstaller
-import app.revenge.manager.installer.shizuku.ShizukuPermissions
-import app.revenge.manager.installer.step.Step
-import app.revenge.manager.installer.step.StepGroup
-import app.revenge.manager.installer.step.StepRunner
-import app.revenge.manager.utils.isMiui
-import app.revenge.manager.utils.showToast
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.InstallMethod
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.installer.Installer
+import app.involvexcord.manager.installer.session.SessionInstaller
+import app.involvexcord.manager.installer.shizuku.ShizukuInstaller
+import app.involvexcord.manager.installer.shizuku.ShizukuPermissions
+import app.involvexcord.manager.installer.step.Step
+import app.involvexcord.manager.installer.step.StepGroup
+import app.involvexcord.manager.installer.step.StepRunner
+import app.involvexcord.manager.utils.isMiui
+import app.involvexcord.manager.utils.showToast
 import org.koin.core.component.inject
 import java.io.File
 

@@ -1,18 +1,18 @@
-package app.revenge.manager.installer.step.patching
+package app.involvexcord.manager.installer.step.patching
 
 import android.os.Build
 import com.github.diamondminer88.zip.ZipCompression
 import com.github.diamondminer88.zip.ZipReader
 import com.github.diamondminer88.zip.ZipWriter
-import app.revenge.manager.R
-import app.revenge.manager.installer.step.Step
-import app.revenge.manager.installer.step.StepGroup
-import app.revenge.manager.installer.step.StepRunner
-import app.revenge.manager.installer.step.download.DownloadBaseStep
-import app.revenge.manager.installer.step.download.DownloadLangStep
-import app.revenge.manager.installer.step.download.DownloadLibsStep
-import app.revenge.manager.installer.step.download.DownloadResourcesStep
-import app.revenge.manager.installer.util.Signer
+import app.involvexcord.manager.R
+import app.involvexcord.manager.installer.step.Step
+import app.involvexcord.manager.installer.step.StepGroup
+import app.involvexcord.manager.installer.step.StepRunner
+import app.involvexcord.manager.installer.step.download.DownloadBaseStep
+import app.involvexcord.manager.installer.step.download.DownloadLangStep
+import app.involvexcord.manager.installer.step.download.DownloadLibsStep
+import app.involvexcord.manager.installer.step.download.DownloadResourcesStep
+import app.involvexcord.manager.installer.util.Signer
 import java.io.File
 
 /**

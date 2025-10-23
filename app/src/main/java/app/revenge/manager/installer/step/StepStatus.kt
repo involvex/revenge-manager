@@ -1,4 +1,4 @@
-package app.revenge.manager.installer.step
+package app.involvexcord.manager.installer.step
 
 enum class StepStatus {
     /**

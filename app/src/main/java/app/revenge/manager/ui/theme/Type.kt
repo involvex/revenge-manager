@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.theme
+package app.involvexcord.manager.ui.theme
 
 import androidx.compose.material3.Typography
 

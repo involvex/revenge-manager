@@ -1,4 +1,4 @@
-package app.revenge.manager.network.dto
+package app.involvexcord.manager.network.dto
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

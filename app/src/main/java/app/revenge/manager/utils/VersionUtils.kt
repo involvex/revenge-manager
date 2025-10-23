@@ -1,7 +1,7 @@
-package app.revenge.manager.utils
+package app.involvexcord.manager.utils
 
 import androidx.annotation.StringRes
-import app.revenge.manager.R
+import app.involvexcord.manager.R
 import java.io.Serializable
 
 data class DiscordVersion(

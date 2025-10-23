@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.viewmodel.libraries
+package app.involvexcord.manager.ui.viewmodel.libraries
 
 import android.content.Context
 import cafe.adriel.voyager.core.model.ScreenModel

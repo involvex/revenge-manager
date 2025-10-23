@@ -1,8 +1,8 @@
-package app.revenge.manager.domain.repository
+package app.involvexcord.manager.domain.repository
 
-import app.revenge.manager.network.service.RestService
-import app.revenge.manager.network.utils.transform
-import app.revenge.manager.utils.DiscordVersion
+import app.involvexcord.manager.network.service.RestService
+import app.involvexcord.manager.network.utils.transform
+import app.involvexcord.manager.utils.DiscordVersion
 
 class RestRepository(
     private val service: RestService

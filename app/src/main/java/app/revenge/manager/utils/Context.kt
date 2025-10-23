@@ -1,4 +1,4 @@
-package app.revenge.manager.utils
+package app.involvexcord.manager.utils
 
 import android.content.Context
 import android.util.TypedValue

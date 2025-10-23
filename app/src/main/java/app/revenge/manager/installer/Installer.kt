@@ -1,4 +1,4 @@
-package app.revenge.manager.installer
+package app.involvexcord.manager.installer
 
 import java.io.File
 

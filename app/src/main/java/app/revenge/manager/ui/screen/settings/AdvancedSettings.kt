@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.screen.settings
+package app.involvexcord.manager.ui.screen.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
@@ -25,14 +25,14 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import app.revenge.manager.R
-import app.revenge.manager.domain.manager.Mirror
-import app.revenge.manager.domain.manager.PreferenceManager
-import app.revenge.manager.ui.components.settings.SettingsButton
-import app.revenge.manager.ui.components.settings.SettingsItemChoice
-import app.revenge.manager.ui.components.settings.SettingsSwitch
-import app.revenge.manager.ui.viewmodel.settings.AdvancedSettingsViewModel
-import app.revenge.manager.utils.DimenUtils
+import app.involvexcord.manager.R
+import app.involvexcord.manager.domain.manager.Mirror
+import app.involvexcord.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.ui.components.settings.SettingsButton
+import app.involvexcord.manager.ui.components.settings.SettingsItemChoice
+import app.involvexcord.manager.ui.components.settings.SettingsSwitch
+import app.involvexcord.manager.ui.viewmodel.settings.AdvancedSettingsViewModel
+import app.involvexcord.manager.utils.DimenUtils
 import org.koin.androidx.compose.get
 
 class AdvancedSettings: Screen {

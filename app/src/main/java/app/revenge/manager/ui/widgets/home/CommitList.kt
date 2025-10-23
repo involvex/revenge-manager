@@ -1,4 +1,4 @@
-package app.revenge.manager.ui.widgets.home
+package app.involvexcord.manager.ui.widgets.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,9 +20,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import app.revenge.manager.R
-import app.revenge.manager.network.dto.Commit
-import app.revenge.manager.utils.itemsIndexed
+import app.involvexcord.manager.R
+import app.involvexcord.manager.network.dto.Commit
+import app.involvexcord.manager.utils.itemsIndexed
 
 @Composable
 fun CommitList(
@@ -39,7 +39,7 @@ fun CommitList(
             key = { _, commit -> commit.sha }
         ) { i, commit ->
             Column {
-                Commit(commit = commit)
+                CommitItem(commit)
                 if (i < commits.itemSnapshotList.lastIndex) {
                     Divider(
                         thickness = 0.5.dp,

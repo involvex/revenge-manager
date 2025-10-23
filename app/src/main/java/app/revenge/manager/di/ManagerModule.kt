@@ -1,8 +1,8 @@
-package app.revenge.manager.di
+package app.involvexcord.manager.di
 
-import app.revenge.manager.domain.manager.DownloadManager
-import app.revenge.manager.domain.manager.InstallManager
-import app.revenge.manager.domain.manager.PreferenceManager
+import app.involvexcord.manager.domain.manager.DownloadManager
+import app.involvexcord.manager.domain.manager.InstallManager
+import app.involvexcord.manager.domain.manager.PreferenceManager
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 

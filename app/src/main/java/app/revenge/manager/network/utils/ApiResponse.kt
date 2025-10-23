@@ -1,4 +1,4 @@
-package app.revenge.manager.network.utils
+package app.involvexcord.manager.network.utils
 
 import io.ktor.http.HttpStatusCode
 

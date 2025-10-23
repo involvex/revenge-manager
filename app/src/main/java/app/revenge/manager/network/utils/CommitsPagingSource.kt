@@ -1,10 +1,10 @@
-package app.revenge.manager.network.utils
+package app.involvexcord.manager.network.utils
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import app.revenge.manager.BuildConfig
-import app.revenge.manager.domain.repository.RestRepository
-import app.revenge.manager.network.dto.Commit
+import app.involvexcord.manager.BuildConfig
+import app.involvexcord.manager.domain.repository.RestRepository
+import app.involvexcord.manager.network.dto.Commit
 
 class CommitsPagingSource(
     private val repo: RestRepository
