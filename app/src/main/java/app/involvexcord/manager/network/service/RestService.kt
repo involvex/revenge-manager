@@ -33,4 +33,10 @@ class RestService(
         }
     }
 
+    suspend fun getGitHubFileContent(owner: String, repo: String, path: String) = withContext(Dispatchers.IO) {
+        httpService.request<String> {
+            url("https://raw.githubusercontent.com/$owner/$repo/main/$path")
+        }
+    }
+
 }

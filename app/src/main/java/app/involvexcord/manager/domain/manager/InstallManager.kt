@@ -12,10 +12,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import app.involvexcord.manager.BuildConfig
 import app.involvexcord.manager.installer.session.InstallService
+import app.involvexcord.manager.domain.repository.RestRepository
+import app.involvexcord.manager.network.utils.ApiResponse
+import app.involvexcord.manager.utils.Constants
+import java.io.File
 
 class InstallManager(
     private val context: Context,
     private val prefs: PreferenceManager,
+    private val restRepository: RestRepository
 ) {
 
     var current by mutableStateOf<PackageInfo?>(null)
@@ -65,6 +70,36 @@ class InstallManager(
                 it.packageName,
                 contentIntent.intentSender
             )
+        }
+    }
+
+    suspend fun downloadRevengeBundleFile(filePath: String): File? {
+        return when (val response = restRepository.getGitHubFileContent(
+            Constants.REVENGE_BUNDLE_OWNER,
+            Constants.REVENGE_BUNDLE_REPO,
+            filePath
+        )) {
+            is ApiResponse.Success -> {
+                val file = File(context.filesDir, filePath.substringAfterLast('/'))
+                file.writeText(response.data)
+                file
+            }
+            else -> null
+        }
+    }
+
+    suspend fun downloadRevengeManagerFile(filePath: String): File? {
+        return when (val response = restRepository.getGitHubFileContent(
+            Constants.REVENGE_MANAGER_OWNER,
+            Constants.REVENGE_MANAGER_REPO,
+            filePath
+        )) {
+            is ApiResponse.Success -> {
+                val file = File(context.filesDir, filePath.substringAfterLast('/'))
+                file.writeText(response.data)
+                file
+            }
+            else -> null
         }
     }
 }

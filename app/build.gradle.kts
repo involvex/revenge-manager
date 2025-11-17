@@ -134,6 +134,8 @@ dependencies {
     implementation(libs.bundles.shizuku)
     implementation(libs.bundles.voyager)
 
+    implementation("androidx.compose.material:material-icons-extended")
+
     implementation(files("libs/lspatch.aar"))
 
     implementation(libs.aboutlibraries.core)
@@ -192,4 +194,3 @@ fun exec(vararg command: String): String? {
 tasks.publish {
     dependsOn("assembleRelease")
 }
-

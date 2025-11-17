@@ -9,5 +9,5 @@ import org.koin.dsl.module
 val managerModule = module {
     singleOf(::DownloadManager)
     singleOf(::PreferenceManager)
-    singleOf(::InstallManager)
+    single { InstallManager(get(), get(), get()) }
 }

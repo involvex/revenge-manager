@@ -7,6 +7,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -34,7 +35,7 @@ import app.involvexcord.manager.ui.components.settings.SettingsSwitch
 import app.involvexcord.manager.ui.components.settings.SettingsTextField
 import app.involvexcord.manager.utils.DimenUtils
 import app.involvexcord.manager.utils.DiscordVersion
-import org.koin.androidx.compose.get
+import org.koin.compose.koinInject
 import java.io.File
 
 class DeveloperSettings: Screen {
@@ -42,8 +43,8 @@ class DeveloperSettings: Screen {
     @Composable
     @OptIn(ExperimentalMaterial3Api::class)
     override fun Content() {
-        val prefs: PreferenceManager = get()
-        val installManager: InstallManager = get()
+        val prefs: PreferenceManager = koinInject()
+        val installManager: InstallManager = koinInject()
         val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
 
         var version by remember {

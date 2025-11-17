@@ -33,7 +33,7 @@ object Signer : KoinComponent {
     val keyStore: File by lazy {
         val ks = filesDir.resolve("ks.keystore")
         migrate(cacheDir, filesDir)
-        migrate(Constants.MOD_DIR, filesDir)
+        migrate(File(Constants.MOD_DIR), filesDir)
         ks.also {
             if (!it.exists()) {
                 it.createNewFile()

@@ -54,6 +54,12 @@
             </intent-filter>
         </activity>
 
+        <!-- Debug activity for runtime download test -->
+        <activity
+            android:name=".ui.activity.DebugDownloadActivity"
+            android:exported="false"
+            android:label="@string/app_name" />
+
         <service android:name=".installer.session.InstallService"/>
 
         <receiver android:name=".domain.receiver.InstallReceiver"

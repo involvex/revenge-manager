@@ -13,11 +13,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
@@ -50,9 +50,15 @@ import app.involvexcord.manager.domain.manager.PreferenceManager
 import app.involvexcord.manager.ui.screen.libraries.LibrariesScreen
 import app.involvexcord.manager.ui.widgets.about.LinkItem
 import app.involvexcord.manager.ui.widgets.about.ListItem
-import app.involvexcord.manager.ui.widgets.about.UserEntry
 import app.involvexcord.manager.utils.*
-import org.koin.androidx.compose.get
+import org.koin.compose.koinInject
+
+// Constants for developer mode tap thresholds
+private const val TAP_THRESHOLD_1 = 3
+private const val TAP_THRESHOLD_2 = 5
+private const val TAP_THRESHOLD_3 = 8
+private const val TAP_THRESHOLD_FINAL = 10
+
 
 class AboutScreen : Screen {
 
@@ -60,7 +66,7 @@ class AboutScreen : Screen {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun Content() {
         val uriHandler = LocalUriHandler.current
-        val prefs: PreferenceManager = get()
+        val prefs: PreferenceManager = koinInject()
         val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
         val ctx = LocalContext.current
         val bitmap = remember {
@@ -102,19 +108,15 @@ class AboutScreen : Screen {
                         style = MaterialTheme.typography.titleLarge
                     )
 
-                    Text(
-                        text = "v${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
-                        style = MaterialTheme.typography.labelLarge,
-                        color = LocalContentColor.current.copy(alpha = 0.5f),
-                        modifier = Modifier.clickable(
-                            enabled = !prefs.isDeveloper
-                        ) {
+                    VersionText(
+                        isDeveloperEnabled = prefs.isDeveloper,
+                        onTap = {
                             tapCount++
                             when (tapCount) {
-                                3 -> ctx.showToast(R.string.msg_seven_left)
-                                5 -> ctx.showToast(R.string.msg_five_left)
-                                8 -> ctx.showToast(R.string.msg_two_left)
-                                10 -> {
+                                TAP_THRESHOLD_1 -> ctx.showToast(R.string.msg_seven_left)
+                                TAP_THRESHOLD_2 -> ctx.showToast(R.string.msg_five_left)
+                                TAP_THRESHOLD_3 -> ctx.showToast(R.string.msg_two_left)
+                                TAP_THRESHOLD_FINAL -> {
                                     ctx.showToast(R.string.msg_unlocked)
                                     prefs.isDeveloper = true
                                 }
@@ -141,115 +143,11 @@ class AboutScreen : Screen {
                     }
                 }
 
-//                Row(
-//                    verticalAlignment = Alignment.CenterVertically,
-//                    horizontalArrangement = Arrangement.SpaceEvenly,
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(top = 16.dp, bottom = 20.dp)
-//                ) {
-//                    UserEntry("oSumAtrIX", "Developer", "osumatrix", isLarge = true)
-//                    UserEntry("Palm", "Lead developer", "palmdevs", isLarge = true)
-//                }
 
-                Text(
-                    text = stringResource(R.string.label_team),
-                    style = MaterialTheme.typography.labelLarge,
-                    modifier = Modifier.padding(16.dp),
-                    color = MaterialTheme.colorScheme.primary
-                )
-                Box(
-                    modifier = Modifier.padding(horizontal = 16.dp)
-                ) {
-                    ElevatedCard {
-                        Constants.TEAM_MEMBERS.forEachIndexed { i, member ->
-                            ListItem(
-                                text = member.name,
-                                subtext = member.role,
-                                imageUrl = "https://github.com/${member.username}.png",
-                                onClick = {
-                                    uriHandler.openUri("https://github.com/${member.username}")
-                                }
-                            )
-                            if (i != Constants.TEAM_MEMBERS.lastIndex) {
-                                Divider(
-                                    thickness = 0.5.dp,
-                                    color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
-                                    modifier = Modifier.padding(horizontal = 16.dp)
-                                )
-                            }
-                        }
-                    }
-                }
 
-                Text(
-                    text = stringResource(R.string.label_special_thanks),
-                    style = MaterialTheme.typography.labelLarge,
-                    modifier = Modifier.padding(16.dp),
-                    color = MaterialTheme.colorScheme.primary
-                )
-                Box(
-                    modifier = Modifier.padding(horizontal = 16.dp)
-                ) {
-                    ElevatedCard {
-                        ListItem(
-                            text = "Pylix",
-                            subtext = "Past developer of Bunny",
-                            imageUrl = "https://github.com/pylixonly.png",
-                            onClick = {
-                                uriHandler.openUri("https://github.com/pylixonly")
-                            }
-                        )
-                        ListItem(
-                            text = "Fiery",
-                            subtext = "Past developer of the iOS tweak",
-                            imageUrl = "https://github.com/FieryFlames.png",
-                            onClick = {
-                                uriHandler.openUri("https://github.com/FieryFlames")
-                            }
-                        )
-                        ListItem(
-                            text = "Maisy",
-                            subtext = "Past developer of Vendetta",
-                            imageUrl = "https://github.com/maisymoe.png",
-                            onClick = {
-                                uriHandler.openUri("https://github.com/maisymoe")
-                            }
-                        )
-                        ListItem(
-                            text = "Wing",
-                            subtext = "Past developer of Manager",
-                            imageUrl = "https://github.com/wingio.png",
-                            onClick = {
-                                uriHandler.openUri("https://github.com/wingio")
-                            }
-                        )
-                        ListItem(
-                            text = "Kasi",
-                            subtext = "Past developer of the Xposed Module",
-                            imageUrl = "https://github.com/redstonekasi.png",
-                            onClick = {
-                                uriHandler.openUri("https://github.com/redstonekasi")
-                            }
-                        )
-                        ListItem(
-                            text = "rushii",
-                            subtext = "Developer of the installer, zip library, and a portions of patching",
-                            imageUrl = "https://github.com/rushiiMachine.png",
-                            onClick = {
-                                uriHandler.openUri("https://github.com/rushiiMachine")
-                            }
-                        )
-                        ListItem(
-                            text = "Xinto",
-                            subtext = "Developer of the preference manager",
-                            imageUrl = "https://github.com/X1nto.png",
-                            onClick = {
-                                uriHandler.openUri("https://github.com/X1nto")
-                            }
-                        )
-                    }
-                }
+                TeamMembersSection(uriHandler)
+
+                SpecialThanksSection(uriHandler)
 
                 Box(
                     modifier = Modifier.padding(16.dp)
@@ -257,15 +155,7 @@ class AboutScreen : Screen {
                     ElevatedCard {
                         val navigator = LocalNavigator.currentOrThrow
 
-                        // ListItem(
-                        //     text = stringResource(R.string.label_translate),
-                        //     onClick = { uriHandler.openUri("https://crowdin.com/project/vendetta-manager") }
-                        // )
-//                        Divider(
-//                            thickness = 0.5.dp,
-//                            color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
-//                            modifier = Modifier.padding(horizontal = 16.dp)
-//                        )
+
                         ListItem(
                             text = stringResource(R.string.title_os_libraries),
                             onClick = { navigator.push(LibrariesScreen()) }
@@ -285,16 +175,105 @@ class AboutScreen : Screen {
 
         TopAppBar(
             title = { Text(stringResource(R.string.title_about)) },
-            scrollBehavior = scrollBehavior,
             navigationIcon = {
                 IconButton(onClick = { navigator.pop() }) {
-                    Icon(
-                        imageVector = Icons.Filled.ArrowBack,
-                        contentDescription = stringResource(R.string.action_back)
-                    )
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, null)
                 }
+            },
+            scrollBehavior = scrollBehavior
+        )
+    }
+
+    @Composable
+    private fun VersionText(
+        isDeveloperEnabled: Boolean,
+        onTap: () -> Unit
+    ) {
+        Text(
+            text = "v${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
+            style = MaterialTheme.typography.labelLarge,
+            color = LocalContentColor.current.copy(alpha = 0.5f),
+            modifier = Modifier.clickable(
+                enabled = !isDeveloperEnabled
+            ) {
+                onTap()
             }
         )
+    }
+
+    @Composable
+    private fun TeamMembersSection(uriHandler: androidx.compose.ui.platform.UriHandler) {
+        Text(
+            text = stringResource(R.string.label_team),
+            style = MaterialTheme.typography.labelLarge,
+            modifier = Modifier.padding(16.dp),
+            color = MaterialTheme.colorScheme.primary
+        )
+        Box(
+            modifier = Modifier.padding(horizontal = 16.dp)
+        ) {
+            ElevatedCard {
+                Constants.TEAM_MEMBERS.forEachIndexed { i, member ->
+                    ListItem(
+                        text = member.name,
+                        subtext = member.role,
+                        imageUrl = "https://github.com/${member.username}.png",
+                        onClick = {
+                            uriHandler.openUri("https://github.com/${member.username}")
+                        }
+                    )
+                    if (i != Constants.TEAM_MEMBERS.lastIndex) {
+                        HorizontalDivider(
+                            thickness = 0.5.dp,
+                            color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
+                            modifier = Modifier.padding(horizontal = 16.dp)
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    @Composable
+    private fun SpecialThanksSection(uriHandler: androidx.compose.ui.platform.UriHandler) {
+        Text(
+            text = stringResource(R.string.label_special_thanks),
+            style = MaterialTheme.typography.labelLarge,
+            modifier = Modifier.padding(16.dp),
+            color = MaterialTheme.colorScheme.primary
+        )
+        Box(
+            modifier = Modifier.padding(horizontal = 16.dp)
+        ) {
+            ElevatedCard {
+                val specialThanksList = listOf(
+                    Triple("Pylix", "Past developer of Bunny", "https://github.com/pylixonly"),
+                    Triple("Fiery", "Past developer of the iOS tweak", "https://github.com/FieryFlames"),
+                    Triple("Maisy", "Past developer of Vendetta", "https://github.com/maisymoe"),
+                    Triple("Wing", "Past developer of Manager", "https://github.com/wingio"),
+                    Triple("Kasi", "Past developer of the Xposed Module", "https://github.com/redstonekasi"),
+                    Triple("rushii", "Developer of the installer, zip library, and a portions of patching", "https://github.com/rushiiMachine"),
+                    Triple("Xinto", "Developer of the preference manager", "https://github.com/X1nto")
+                )
+                specialThanksList.forEachIndexed { i, (name, subtext, url) ->
+                    ListItem(
+                        text = name,
+                        subtext = subtext,
+                        imageUrl = "$url.png",
+                        onClick = {
+                            uriHandler.openUri(url)
+                        }
+                    )
+                    if (i != specialThanksList.lastIndex) {
+                        HorizontalDivider(
+                            thickness = 0.5.dp,
+                            color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
+                            modifier = Modifier.padding(horizontal = 16.dp)
+                        )
+                    }
+                }
+            }
+        }
     }
 
 }

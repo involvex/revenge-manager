@@ -18,6 +18,10 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import java.util.concurrent.TimeUnit
 
+object Channels {
+    const val UPDATE = "${BuildConfig.APPLICATION_ID}.notifications.UPDATE"
+}
+
 class ManagerApplication : Application() {
 
     override fun onCreate() {
@@ -64,7 +68,7 @@ class ManagerApplication : Application() {
         val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
 
         val updates = NotificationChannel(
-            "${BuildConfig.APPLICATION_ID}.notifications.UPDATE",
+            Channels.UPDATE,
             "Discord updates",
             NotificationManager.IMPORTANCE_DEFAULT
         )

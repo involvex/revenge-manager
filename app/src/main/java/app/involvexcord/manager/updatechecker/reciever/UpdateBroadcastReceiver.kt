@@ -8,7 +8,7 @@ import android.content.Intent
 import androidx.core.app.NotificationCompat
 import app.involvexcord.manager.BuildConfig
 import app.involvexcord.manager.R
-import app.involvexcord.manager.utils.Channels
+import app.involvexcord.manager.Channels
 import app.involvexcord.manager.utils.DiscordVersion
 import app.involvexcord.manager.utils.Intents
 

@@ -33,6 +33,8 @@
     <string name="step_dl_lang">Downloading language apk</string>
     <string name="step_dl_res">Downloading resources apk</string>
     <string name="step_dl_mod">Downloading Involvexcord</string>
+    <string name="step_download_manager_config">Downloading manager config</string>
+    <string name="step_download_revenge_mod">Downloading Involvexcord Mod</string>
 
     <string name="step_change_icon">Changing app icon</string>
     <string name="step_patch_manifests">Patching app manifests</string>
